@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calvin Shejin George - Visionary Entrepreneur, Founder of Deffenso Academy & SOL 31. Leading innovation in Cybersecurity and Sustainable Healthcare Technology.">
+    <meta name="keywords" content="cybersecurity, sustainable healthcare, entrepreneur, EdTech, digital security">
+    <meta name="author" content="Calvin Shejin George">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Calvin Shejin George - Building the Future Safely & Sustainably">
+    <meta property="og:description" content="Visionary Entrepreneur | Founder of Deffenso Academy & SOL 31 | Cybersecurity & Sustainable Tech Leader">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calvinshejingeorge.com">
+    
+    <title>Calvin Shejin George - Visionary Entrepreneur & Tech Leader</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f172e;
+            --secondary: #1a2847;
+            --accent: #00d4ff;
+            --accent-warm: #1dd1a1;
+            --text-light: #e8eef5;
+            --text-muted: #a8b5c8;
+            --border: rgba(0, 212, 255, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 23, 46, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--accent);
+            margin: 4px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(29, 209, 161, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 10;
+            animation: slideUp 1s ease-out;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-warm), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .subtext {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: var(--accent);
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .philosophy {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .philosophy p {
+            font-style: italic;
+            color: var(--accent-warm);
+            margin: 0;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(29, 209, 161, 0.1));
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--accent);
+        }
+
+        /* Ventures Section */
+        .ventures {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .ventures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .venture-card {
+            background: rgba(26, 40, 71, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .venture-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+        }
+
+        .venture-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .venture-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .venture-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .venture-card .role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .venture-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .venture-stat {
+            background: rgba(0, 212, 255, 0.05);
+            padding: 0.8rem;
+            border-radius: 6px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-item {
+            background: rgba(26, 40, 71, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            border-color: var(--accent-warm);
+            box-shadow: 0 8px 25px rgba(29, 209, 161, 0.1);
+        }
+
+        .skill-item h3 {
+            color: var(--accent-warm);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-item p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Impact Section */
+        .impact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .impact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .impact-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-warm);
+        }
+
+        .impact-text p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: rgba(29, 209, 161, 0.1);
+            border: 2px solid var(--accent-warm);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-warm);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .impact-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(29, 209, 161, 0.1), rgba(0, 212, 255, 0.1));
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-method a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-method a:hover {
+            color: var(--accent-warm);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 46, 0.5);
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: rgba(15, 23, 46, 0.95);
+                padding: 1rem;
+                gap: 1rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero {
+                padding: 5rem 1rem 1rem;
+            }
+
+            .hero-text h1 {
+                margin-bottom: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-content,
+            .impact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image,
+            .impact-image {
+                height: 300px;
+            }
+
+            .ventures-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+            }
+
+            .section-title {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">CSG</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ventures">Ventures</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Building the Future</h1>
+                <p class="tagline">Safely, Sustainably, and Ethically</p>
+                <p class="subtext">Visionary Entrepreneur | Founder of Deffenso Academy & SOL 31 | Cybersecurity & Sustainable Tech Leader</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="#about" class="btn btn-primary">Explore My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <h2>Closing the Gap. Creating Impact.</h2>
+                <p>Closing the global digital defense gap while pioneering ethical, wellness-focused solutions for the healthcare sector—this is my mission.</p>
+                <p>With a deep passion for cybersecurity and sustainable innovation, I've dedicated my career to building ventures that protect, educate, and empower. Every initiative stems from a belief that technology should serve humanity, not the reverse.</p>
+                <div class="philosophy">
+                    <p>"Technology is a force multiplier for good when built with intention, ethics, and a commitment to human welfare."</p>
+                </div>
+            </div>
+            <div class="about-image">
+  <img src="logos/fscsg.jpg" alt="Calvin Shejin George" />
+</div>
+        </div>
+    </section>
+
+    <!-- Ventures Section -->
+    <section class="ventures" id="ventures">
+        <h2 class="section-title">Ventures</h2>
+        <div class="ventures-grid fade-in">
+            <div class="venture-card">
+                <div class="venture-icon">🎓</div>
+                <h3>Deffenso Academy</h3>
+                <p class="role">Founder & Educational Leader</p>
+                <p>Global cybersecurity education platform empowering learners worldwide with practical defense skills.</p>
+                <div class="venture-stat">115+ Certified Instructors | Global Reach</div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; font-style: italic; color: var(--accent);">Train the Mind to Defend the Future</p>
+            </div>
+            <div class="venture-card">
+                <div class="venture-icon">🏥</div>
+                <h3>SOL 31 (SOLH)</h3>
+                <p class="role">Co-Founder & Innovation Lead</p>
+                <p>Pioneering sustainable healthcare technology solutions that prioritize human wellness and ethical innovation.</p>
+                <div class="venture-stat">Wellness-First Approach | Impact-Driven</div>
+            </div>
+            <div class="venture-card">
+                <div class="venture-icon">🔐</div>
+                <h3>The Third Eye Scantum</h3>
+                <p class="role">Leadership & Strategic Direction</p>
+                <p>Advanced cybersecurity project driving innovation in digital defense and threat intelligence.</p>
+                <div class="venture-stat">Cutting-Edge Research | Industry Innovation</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid fade-in">
+            <div class="skill-item">
+                <h3>Leadership</h3>
+                <p>Company founding, strategic vision, team building, and organizational management across multiple sectors.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Cybersecurity</h3>
+                <p>Ethical hacking, digital forensics, risk assessment, threat analysis, and advanced defense strategies.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Technology</h3>
+                <p>EdTech development, sustainable tech solutions, system architecture, and innovation strategy.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Public Outreach</h3>
+                <p>Public speaking, digital literacy campaigns, community engagement, and awareness initiatives.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Strategic Thinking</h3>
+                <p>Long-term vision planning, market analysis, scalability design, and ethical business frameworks.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Innovation</h3>
+                <p>Identifying emerging trends, problem-solving, R&D direction, and future-forward solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <h2 class="section-title">Community Impact</h2>
+        <div class="impact-content fade-in">
+            <div class="impact-text">
+                <h2>Empowering Society Through Digital Safety</h2>
+                <p>Through strategic partnerships with NSS (National Security Society) and multiple public awareness initiatives, I'm committed to democratizing cybersecurity knowledge and building a digitally literate society.</p>
+                <p>Every training session, every educational module, every public talk is an investment in collective digital resilience. My work with community organizations extends beyond traditional education—it's about creating a cultural shift toward cyber-awareness and responsibility.</p>
+                <div class="impact-stats">
+                    <div class="stat-box">
+                        <div class="number">115+</div>
+                        <div class="label">Certified Instructors</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">Global</div>
+                        <div class="label">Reach & Impact</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+  <img src="logos/FOUNDER_CEO_DEFFENSOACADEMY_LOGO (1).png" alt="Calvin Shejin George" />
+</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content fade-in">
+            <h2>Let's Connect</h2>
+            <p>Interested in collaboration, speaking engagements, or exploring opportunities?</p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <label style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Email</label>
+                    <a href="mailto:calvinshejin@gmail.com">calvinshejin@gmail.com</a>
+                </div>
+            </div>
+            <div class="social-links">
+  <a href="https://www.linkedin.com/in/calvinshejingeroge/" class="social-link" title="LinkedIn" target="_blank">in</a>
+  <a href="https://www.youtube.com/@whispersofcalvin" class="social-link" title="YouTube" target="_blank">▶</a>
+  <a href="https://instagram.com/calvin.mukkathu/" class="social-link" title="Instagram" target="_blank">📷</a>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Calvin Shejin George. Building the future—safely, sustainably, and ethically.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.ventures-grid, .about-content, .skills-grid, .impact-content, .contact-content').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(15, 23, 46, 0.95)';
+            } else {
+                nav.style.background = 'rgba(15, 23, 46, 0.85)';
+            }
+        });
+    </script>
+</body>
+</html>
